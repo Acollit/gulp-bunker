@@ -17,9 +17,72 @@
     right: 0;
     bottom: 0;
     background-image: url(../img/hero-content.webp);
+    background-size: cover;
+    z-index: 0;
+
+    @include tablet {
+      right: 0px;
+      width: 521px;
+      height: 421px;
+    }
+
+    @include mobile {
+      width: 460px;
+    }
   }
 
+
+
+  @include tablet {
+    padding-bottom: 53px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 425px;
+    padding-top: 30px;
+  }
+
+  &--two {
+    padding-bottom: 574px;
+
+    &::before {
+      background-image: url(../img/hero-bg-2.webp);
+      width: 777px;
+      height: 562px;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+
+      @include tablet {
+        width: 436px;
+        height: 272px;
+        background-image: url(../img/hero-bg-2-1.webp);
+      }
+
+      @include small-tablet {
+        width: 334px;
+        height: 332px;
+        bottom: 79px;
+        background-image: url(../img/hero-bg-2-2.webp);
+        z-index: 0;
+      }
+
+    }
+
+    @include tablet {
+      padding-top: 15px;
+      padding-bottom: 270px;
+    }
+
+    @include small-tablet {
+      padding-bottom: 23px;
+    }
+  }
+
+
   &__title {
+    position: relative;
+    z-index: 1;
     max-width: 730px;
     margin: 0;
     margin-bottom: 30px;
@@ -30,9 +93,30 @@
     text-transform: uppercase;
     color: #fff;
 
+    &--two {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 34px;
+
+      @include small-tablet {
+        margin-bottom: 340px;
+      }
+    }
+
     span {
       color: #fc0;
     }
+
+    @include tablet {
+      font-size: 48px;
+    }
+
+    @include small-tablet {
+      font-size: 30px;
+    }
+
+
   }
 
   &__text {
@@ -45,6 +129,18 @@
     font-weight: 400;
     font-size: 22px;
     color: #fff;
+
+    @include tablet {
+      margin-bottom: 60px;
+      font-size: 18px;
+      gap: 10px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+      font-size: 14px;
+      gap: 6px;
+    }
   }
 
   &__btn {
@@ -55,6 +151,22 @@
     border: 1px solid #6ad2ba;
     background: #38b99c;
     border-radius: 50px;
-    padding: 22px 36px;
+    padding: 16px 36px;
+    transition: all .3s ease-in-out;
+
+    &--two {
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    &:hover {
+      background: #24a98c;
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
   }
 }

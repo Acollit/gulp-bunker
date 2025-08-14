@@ -1,5 +1,12 @@
 .product {
   margin-bottom: 85px;
+
+
+
+  @include small-tablet {
+    margin-bottom: 100px;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 60px;
@@ -9,6 +16,15 @@
     line-height: 100%;
     text-align: center;
     color: #fff;
+
+    @include tablet {
+      font-size: 40px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+      font-size: 34px;
+    }
   }
 
   &__content {
@@ -16,6 +32,22 @@
     align-items: center;
     justify-content: center;
     gap: 65px;
+
+    @include tablet {
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &--two {
+      @include tablet {
+        gap: 20px;
+      }
+    }
   }
 
   &__item {
@@ -33,6 +65,34 @@
         color: #1f1f1f;
       }
 
+      .product__price {
+        color: #1f1f1f;
+      }
+    }
+
+    @include tablet {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px 44px;
+      padding-top: 10px;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    @include midl-tablet {
+      max-width: 900px;
+    }
+
+    @include small-tablet {
+      max-width: 900px;
+      width: 100%;
+      padding: 20px 20px;
+      padding-top: 10px;
+
+
     }
   }
 
@@ -47,7 +107,27 @@
     text-align: center;
     color: #fff;
 
+    &--two {
+      margin: 20px auto 10px auto;
+    }
 
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+  }
+
+  &__price {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
   }
 
   &__link {
@@ -64,5 +144,10 @@
     font-weight: 600;
     font-size: 22px;
     color: #fff;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #24a98c;
+    }
   }
 }

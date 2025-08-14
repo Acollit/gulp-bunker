@@ -1,0 +1,264 @@
+.footer {
+  padding-bottom: 18px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__logo {
+
+
+    @include small-tablet {
+      display: block;
+      margin: 0 auto;
+
+      img {
+        width: 74px;
+        height: 101px;
+      }
+
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 90px;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    @include small-tablet {
+
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include small-tablet {
+      font-size: 18px
+    }
+
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+
+    @include tablet {
+      font-size: 22px;
+    }
+
+    @include small-tablet {
+      margin-top: 20px;
+      font-size: 18px;
+
+      svg {
+        width: 20px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__form {
+    max-width: 746px;
+    width: 100%;
+    position: relative;
+    border: 1px solid #5d5d5d;
+    border-radius: 20px;
+    background-image: url(../img/form-bg.webp);
+    background-size: cover;
+    padding: 30px;
+    overflow: hidden;
+    background-color: #383838;
+
+    @include tablet {
+      max-width: 535px;
+    }
+
+    @include midl-tablet {
+      max-width: 370px;
+    }
+
+    @include small-tablet {
+      order: -1;
+
+      max-width: 700px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 239px;
+      height: 337px;
+      right: 30px;
+      bottom: -2px;
+      background-image: url(../img/form-content-3.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include tablet {
+        background-image: url(../img/form-content-2.webp);
+        width: 188px;
+        height: 330px;
+      }
+
+      @include midl-tablet {
+        display: none;
+      }
+    }
+
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 18px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    color: #fff;
+
+    @include small-tablet {
+      font-size: 34px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__span {
+    margin: 0;
+    margin-bottom: 36px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    color: #fff;
+    opacity: 0.7;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__input {
+    max-width: 376px;
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+    outline: none;
+    background: #474747;
+    border: 1px solid #585858;
+    border-radius: 5px;
+    padding: 12px 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #fff;
+
+    @include tablet {
+      max-width: 282px;
+    }
+
+    @include small-tablet {
+      max-width: 500px;
+    }
+
+    &::placeholder {
+      color: rgba($color: #FFF, $alpha: .7);
+    }
+  }
+
+  &__btn {
+    margin-top: 40px;
+    border: 1px solid #6ad2ba;
+    border-radius: 50px;
+    padding: 14px 36px;
+    background: #38b99c;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #24a98c;
+    }
+
+    @include tablet {
+      max-width: 282px;
+      width: 100%;
+    }
+
+    @include small-tablet {
+      max-width: 500px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &__cop {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #ccc;
+  }
+
+  &__polit {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: right;
+    color: #ccc;
+  }
+}

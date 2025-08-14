@@ -1,0 +1,122 @@
+.graph-modal {
+
+  &__container {
+    border-radius: 20px !important;
+    width: 529px !important;
+    background: #fdfdfd !important;
+    background-image: url(../img/modal-bg.webp) !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom right !important;
+
+    @include small-tablet {
+      background-size: 330px 229px !important;
+    }
+  }
+
+  &__content {
+    padding-top: 40px;
+    padding-bottom: 290px;
+
+    @include tablet {
+    padding-bottom: 210px;
+    }
+  }
+
+  &__close {
+    right: 20px !important;
+    top: 20px !important;
+    width: 32px !important;
+    height: 32px !important;
+    background-image: url(../img/close.svg);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 112%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #282828;
+
+    @include small-tablet {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #767676;
+
+    @include small-tablet {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__input {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    max-width: 380px;
+    width: 100%;
+    border: 1px solid #cdcdcd;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 144%;
+    color: rgba(39, 39, 39, 1);
+
+    &::placeholder {
+      color: rgba(39, 39, 39, 0.5);
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 27px;
+    margin-bottom: 18px;
+    max-width: 380px;
+    width: 100%;
+    border: 1px solid #6ad2ba;
+    background: #38b99c;
+    border-radius: 50px;
+    padding: 16px 36px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #24a98c;
+    }
+  }
+
+  &__descr {
+    margin: 0 auto;
+    max-width: 380px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: #2f2f2f;
+    opacity: 0.5;
+
+    a {
+      color: #2f2f2f;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.way {
+  margin-bottom: 140px;
+
+  @include small-tablet {
+    margin-bottom: 106px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 60px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+
+    span {
+      font-weight: 700;
+      color: #fc0;
+    }
+
+    @include tablet {
+      font-size: 40px;
+      margin-bottom: 48px;
+    }
+
+    @include small-tablet {
+      font-size: 34px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include small-tablet {
+      gap: 14px;
+    }
+  }
+
+  &__item {
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid #5d5d5d;
+    border-radius: 20px;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #383838;
+
+    &--accent {
+      background: linear-gradient(313deg, #faae18 0%, #fec91b 100%);
+
+      .way__name {
+
+        color: #252525;
+      }
+
+      .way__descr {
+
+        color: #252525;
+      }
+    }
+
+    @include midl-tablet {
+      max-width: 900px;
+    }
+
+    @include small-tablet {
+      padding: 30px 20px 50px 20px;
+    }
+  }
+
+  &__name {
+    margin: 30px 0 16px 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #eee;
+
+    span {
+      color: #fc0;
+    }
+
+    @include small-tablet {
+      font-size: 24px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    color: #eee;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+}

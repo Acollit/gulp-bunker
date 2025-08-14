@@ -1,0 +1,246 @@
+.table {
+  margin-bottom: 140px;
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 90px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+
+    @include tablet {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin: 0 auto;
+    max-width: 930px;
+    background: #383838;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+
+
+    @include midl-tablet {
+      overflow: scroll;
+    }
+
+
+  }
+
+  &__wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 930px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 411px;
+      height: 598px;
+      left: -270px;
+      top: -57px;
+      background-image: url(../img/table-bg.webp);
+      background-size: cover;
+      z-index: 0;
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+    width: 930px;
+
+    @include small-tablet {
+      width: 880px;
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    &:nth-child(1) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+      .table__col {
+        &:nth-child(2) {
+          max-width: 415px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+
+          .table__block {
+            &:nth-child(1) {
+              grid-column: 3 span;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            }
+
+            &:nth-child(2) {
+              border-right: 1px solid rgba(255, 255, 255, 0.6);
+            }
+
+            &:nth-child(3) {
+              border-right: 1px solid rgba(255, 255, 255, 0.6);
+            }
+          }
+        }
+
+
+      }
+
+      .table__col {
+        &:nth-child(3) {
+          max-width: 288px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          .table__block {
+            &:nth-child(1) {
+              grid-column: 2 span;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            }
+
+            &:nth-child(2) {
+              border-right: 1px solid rgba(255, 255, 255, 0.6);
+            }
+
+          }
+        }
+
+
+      }
+    }
+
+    &:not(:first-child) {
+
+
+      .table__col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 17px;
+
+        &:first-child {
+          max-width: 227px;
+          width: 100%;
+
+          @include small-tablet {
+            max-width: 180px;
+          }
+        }
+
+        &:nth-child(2) {
+          max-width: 137px;
+        }
+
+        &:nth-child(3) {
+          max-width: 137px;
+        }
+
+        &:nth-child(4) {
+          max-width: 139px;
+        }
+
+        &:nth-child(5) {
+          max-width: 144px;
+        }
+
+        &:nth-child(6) {
+          max-width: 144px;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__col {
+    width: 100%;
+
+    &:first-child {
+      max-width: 227px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include small-tablet {
+        max-width: 180px;
+      }
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+  }
+
+  &__accent {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 110%;
+
+    text-align: center;
+    color: #FFF;
+
+    span {
+      color: #fc0;
+      text-transform: uppercase;
+    }
+
+    @include small-tablet {}
+  }
+
+  &__name {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 110%;
+    color: #fff;
+  }
+
+  &__subtitle {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 110%;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    text-align: center;
+    color: #b5b5b5;
+  }
+}

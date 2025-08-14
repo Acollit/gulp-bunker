@@ -1,0 +1,265 @@
+.where {
+  margin-bottom: 90px;
+
+
+  @include small-tablet {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 70px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+
+    @include tablet {
+      font-size: 40px;
+      margin-bottom: 48px;
+    }
+
+    @include small-tablet {
+      font-size: 34px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include small-tablet {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__map {
+    display: block;
+    margin: 0 auto;
+
+    @include tablet {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
+  }
+
+  &__box {
+    padding: 13px;
+    margin: -13px;
+    position: absolute;
+    cursor: pointer;
+
+    @include tablet {
+      img {
+        display: none;
+        padding: 5px;
+      }
+    }
+
+    &:nth-child(2) {
+      left: 31.284%;
+      top: 27.8%;
+    }
+
+    &:nth-child(3) {
+      left: 25.30%;
+      top: 53.1%;
+    }
+
+    &:nth-child(4) {
+      left: 78.315%;
+      top: 86.2%;
+
+      @include small-tablet {
+        .where__inner {
+          left: -190px;
+        }
+      }
+
+    }
+
+    &:hover {
+      .where__inner {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    left: 45px;
+    top: 0;
+    background: #efefef;
+    border-radius: 10px;
+    padding: 14px 16px;
+    width: 300px;
+
+    @include small-tablet {
+      left: -15px;
+      width: 270px;
+    }
+  }
+
+  &__block {
+    max-width: 624px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 90px;
+
+    @include small-tablet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .where__inner {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background: #383838;
+
+      @include small-tablet {
+        max-width: 800px;
+        width: 100%;
+      }
+
+      &:nth-child(1) {
+        grid-row: 3 span;
+      }
+
+      &:nth-child(3) {
+        grid-column: 2/2;
+      }
+    }
+
+    .where__name {
+      color: #fff;
+    }
+
+    .where__list-item {
+      color: #fff;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #303131;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__list-item {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #5a5b5d;
+  }
+
+  &__link {
+    font-weight: 500;
+    color: #419c88;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    border: 1px solid #6ad2ba;
+    border-radius: 50px;
+    padding: 18px 36px;
+    background: #38b99c;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #24a98c;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+      padding: 15px 36px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 50px;
+      gap: 30px;
+    }
+
+    @include small-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  }
+
+  &__item {
+    max-width: 185px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 103px;
+    border-right: 1px solid #5a5b5d;
+
+    @include tablet {
+      max-width: inherit;
+      width: inherit;
+      border-right: 0px solid #5a5b5d;
+    }
+
+    &:nth-child(1) {
+      max-width: 135px;
+
+      @include tablet {
+        max-width: inherit;
+      }
+    }
+
+    &:nth-child(8) {
+      max-width: 152px;
+      border-right: 0px solid #5a5b5d;
+
+      @include tablet {
+        max-width: inherit;
+      }
+    }
+  }
+
+
+}
