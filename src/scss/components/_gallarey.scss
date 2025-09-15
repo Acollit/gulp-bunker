@@ -41,10 +41,10 @@
   }
 
   &__swiper {
-    display: none;
+    display: none !important;
 
     @include small-tablet {
-      display: block;
+      display: block !important;
     }
 
     .swiper-slide {

@@ -37,12 +37,25 @@
     flex-wrap: wrap;
     gap: 25px;
 
+
+
     @include tablet {
       flex-wrap: wrap;
     }
 
     @include small-tablet {
       gap: 14px;
+    }
+
+    &--three {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      max-width: 925px;
+      margin: 0 auto;
+
+      @include small-tablet {
+        display: flex;  
+      }
     }
   }
 

@@ -44,7 +44,11 @@
     }
 
     &--two {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
       @include tablet {
+        display: flex;
         gap: 20px;
       }
     }
@@ -57,6 +61,7 @@
     border-radius: 20px;
     padding: 37px 26px;
     background: #383838;
+    cursor: pointer;
 
     &:hover {
       background: linear-gradient(248deg, #faae18 0%, #fec91b 100%);
@@ -66,6 +71,10 @@
       }
 
       .product__price {
+        color: #1f1f1f;
+      }
+
+      .product__descr {
         color: #1f1f1f;
       }
     }
@@ -111,11 +120,26 @@
       margin: 20px auto 10px auto;
     }
 
+    &--three {
+      margin: 20px auto 10px auto;
+    }
+
 
     @include tablet {
       font-size: 30px;
     }
 
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
   }
 
   &__price {

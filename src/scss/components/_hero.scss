@@ -12,9 +12,9 @@
   &::before {
     content: '';
     position: absolute;
-    width: 1049px;
-    height: 799px;
-    right: 0;
+    width: 610px;
+    height: 774px;
+    right: 10%;
     bottom: 0;
     background-image: url(../img/hero-content.webp);
     background-size: cover;
@@ -27,7 +27,9 @@
     }
 
     @include mobile {
-      width: 460px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 330px;
     }
   }
 
@@ -38,12 +40,13 @@
   }
 
   @include small-tablet {
-    padding-bottom: 425px;
+    padding-bottom: 435px;
     padding-top: 30px;
   }
 
   &--two {
     padding-bottom: 574px;
+    padding-top: 70px;
 
     &::before {
       background-image: url(../img/hero-bg-2.webp);
@@ -79,6 +82,44 @@
     }
   }
 
+  &--three {
+    padding-bottom: 574px;
+    padding-top: 70px;
+
+    &::before {
+      background-image: url(../img/hero-bg-3.webp);
+      width: 967px;
+      height: 507px;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+
+      @include tablet {
+        width: 436px;
+        height: 272px;
+        background-image: url(../img/hero-bg-3-1.webp);
+      }
+
+      @include small-tablet {
+        width: 318px;
+        height: 329px;
+        bottom: 79px;
+        background-image: url(../img/hero-bg-3-2.webp);
+        z-index: 0;
+      }
+
+    }
+
+    @include tablet {
+      padding-top: 15px;
+      padding-bottom: 270px;
+    }
+
+    @include small-tablet {
+      padding-bottom: 23px;
+    }
+  }
+
 
   &__title {
     position: relative;
@@ -87,7 +128,7 @@
     margin: 0;
     margin-bottom: 30px;
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 68px;
     line-height: 100%;
     text-transform: uppercase;

@@ -162,7 +162,9 @@
     background-image: url(../img/form-bg.webp);
     background-size: cover;
     padding: 30px;
+    padding-bottom: 18px;
     overflow: hidden;
+    background-color: #383838;
 
     &::before {
       content: '';
@@ -173,6 +175,7 @@
       bottom: -12px;
       background-image: url(../img/form-content.webp);
       background-size: contain;
+      background-repeat: no-repeat;
 
       @include small-tablet {
         width: 281px;
@@ -190,6 +193,7 @@
     @include small-tablet {
       background-image: url(../img/form-bg-2.webp);
       padding: 20px 16px;
+      height: 620px;
     }
 
     &--accent {
@@ -256,10 +260,16 @@
     &::placeholder {
       color: rgba($color: #FFF, $alpha: .7);
     }
+
+    @include small-tablet {
+      max-width: 900px;
+    }
   }
 
   &__btn {
-    margin-top: 40px;
+    max-width: 376px;
+    width: 100%;
+    margin-top: 20px;
     border: 1px solid #6ad2ba;
     border-radius: 50px;
     padding: 14px 36px;
@@ -275,10 +285,38 @@
     }
 
     @include small-tablet {
+      max-width: 900px;
       width: 100%;
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 18px;
-      margin-bottom: 308px;
+    }
+  }
+
+  &__form-descr {
+    margin: 0;
+    margin-top: 12px;
+    max-width: 375px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: #fff;
+    opacity: 0.5;
+
+    a {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 133%;
+      text-align: center;
+      color: #fff;
+    }
+
+    @include small-tablet {
+      max-width: 900px;
     }
   }
 }

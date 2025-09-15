@@ -55,7 +55,10 @@
     padding: 13px;
     margin: -13px;
     position: absolute;
-    cursor: pointer;
+
+    img {
+      cursor: pointer;
+    }
 
     @include tablet {
       img {

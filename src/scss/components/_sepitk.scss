@@ -1,0 +1,198 @@
+.sepitk {
+  margin-bottom: 127px;
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
+  &__content {
+    height: 1019px;
+    padding: 46px;
+    border-radius: 20px;
+    background-image: url(../img/sepitk-bg.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    @include tablet {
+
+      height: 1016px;
+    }
+
+    @include midl-tablet {
+      background-image: url(../img/sepitk-bg-2.webp);
+      height: 700px;
+    }
+
+
+    @include small-tablet {
+      background-image: url(../img/sepitk-bg-3.webp);
+      height: 600px;
+    }
+
+    @include mobile {
+      height: 478px;
+    }
+
+    @include mini {
+      height: 348px;
+    }
+  }
+
+  &__title {
+    max-width: 915px;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    color: #070707;
+
+    @include midl-tablet {
+      display: none;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    padding: 20px;
+
+    @include small-tablet {
+      padding: 15px;
+    }
+
+    &:hover {
+      .sepitk__inner {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &:nth-child(2) {
+      left: 41.5%;
+      top: 27.7%;
+
+
+      @include midl-tablet {
+        left: 35.5%;
+        top: 21.7%;
+      }
+
+
+
+      @include small-tablet {
+        left: 34.5%;
+        top: 25.7%;
+      }
+    }
+
+    &:nth-child(3) {
+      left: 61.5%;
+      top: 53.7%;
+
+      @include midl-tablet {
+        left: 64.5%;
+        top: 52.7%;
+      }
+
+
+      @include small-tablet {
+        left: 66.5%;
+      }
+
+      @include small-tablet {
+        .sepitk__inner {
+          right: 15px;
+        }
+
+      }
+    }
+
+    &:nth-child(4) {
+      left: 42.1%;
+      top: 71.2%;
+
+      @include midl-tablet {
+        left: 41.1%;
+        top: 67.2%;
+      }
+
+      @include small-tablet {
+        left: 37.1%;
+        top: 70.2%;
+      }
+
+      @include mobile {
+        .sepitk__inner {
+          left: 5px;
+        }
+
+      }
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.15);
+    background: #efefef;
+    width: 305px;
+
+    @include small-tablet {
+      width: 200px;
+    }
+  }
+
+
+  &__name {
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #303131;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #5a5b5d;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__title-mobile {
+    display: none;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFF;
+
+    span {
+      color: #fc0;
+    }
+
+    @include midl-tablet {
+      display: block;
+    }
+  }
+}
